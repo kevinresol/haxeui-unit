@@ -19,8 +19,8 @@ install:
   - npm i -g lix
   - lix install haxe $HAXE_VERSION
   - lix download
-  - lix install 'gh:haxeui/haxeui-core#new-component-method'
-  - lix install 'gh:haxeui/haxeui-html5#new-component-method'
+  # - lix install 'gh:haxeui/haxeui-core#new-component-method'
+  # - lix install 'gh:haxeui/haxeui-html5#new-component-method'
   
 script:
   - lix run travix js -lib haxeui-html5
