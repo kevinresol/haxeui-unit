@@ -1,0 +1,26 @@
+sudo: required
+dist: trusty
+
+language: node_js
+node_js: 8
+
+cache:
+  directories:
+    - $HOME/haxe
+
+os:
+  - linux
+  # - osx
+
+env:
+  - HAXE_VERSION=3.4.7
+  
+install:
+  - npm i -g lix
+  - lix install haxe $HAXE_VERSION
+  - lix download
+  - lix install 'gh:haxeui/haxeui-core#new-component-method'
+  - lix install 'gh:haxeui/haxeui-html5#new-component-method'
+  
+script:
+  - lix run travix js -lib haxeui-html5

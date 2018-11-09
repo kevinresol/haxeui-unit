@@ -1,0 +1,5 @@
+-cp src
+-main Run
+
+-lib tink_unittest
+-lib haxeui-core
